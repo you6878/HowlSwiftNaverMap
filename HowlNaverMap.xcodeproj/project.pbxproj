@@ -12,7 +12,24 @@
 		023DD4D81EE1BA2C00619590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023DD4D61EE1BA2C00619590 /* Main.storyboard */; };
 		023DD4DA1EE1BA2C00619590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023DD4D91EE1BA2C00619590 /* Assets.xcassets */; };
 		023DD4DD1EE1BA2C00619590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023DD4DB1EE1BA2C00619590 /* LaunchScreen.storyboard */; };
+		023DD4E51EE1BAF200619590 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DD4E41EE1BAF200619590 /* ApiGatewayMac.framework */; };
+		023DD4E61EE1BAF200619590 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 023DD4E41EE1BAF200619590 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		023DD4EA1EE1BB0000619590 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023DD4E91EE1BB0000619590 /* NMapViewerSDK.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		023DD4E71EE1BAF200619590 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				023DD4E61EE1BAF200619590 /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		023DD4CF1EE1BA2C00619590 /* HowlNaverMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowlNaverMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +39,9 @@
 		023DD4D91EE1BA2C00619590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		023DD4DC1EE1BA2C00619590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		023DD4DE1EE1BA2C00619590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023DD4E41EE1BAF200619590 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApiGatewayMac.framework; path = Frameworks/ApiGatewayMac.framework; sourceTree = "<group>"; };
+		023DD4E91EE1BB0000619590 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = Frameworks/NMapViewerSDK.framework; sourceTree = "<group>"; };
+		023DD4EC1EE1BBB900619590 /* HowlNaverMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HowlNaverMap-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023DD4EA1EE1BB0000619590 /* NMapViewerSDK.framework in Frameworks */,
+				023DD4E51EE1BAF200619590 /* ApiGatewayMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +60,10 @@
 		023DD4C61EE1BA2C00619590 = {
 			isa = PBXGroup;
 			children = (
+				023DD4E41EE1BAF200619590 /* ApiGatewayMac.framework */,
 				023DD4D11EE1BA2C00619590 /* HowlNaverMap */,
 				023DD4D01EE1BA2C00619590 /* Products */,
+				023DD4E81EE1BB0000619590 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +84,17 @@
 				023DD4D91EE1BA2C00619590 /* Assets.xcassets */,
 				023DD4DB1EE1BA2C00619590 /* LaunchScreen.storyboard */,
 				023DD4DE1EE1BA2C00619590 /* Info.plist */,
+				023DD4EC1EE1BBB900619590 /* HowlNaverMap-Bridging-Header.h */,
 			);
 			path = HowlNaverMap;
+			sourceTree = "<group>";
+		};
+		023DD4E81EE1BB0000619590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				023DD4E91EE1BB0000619590 /* NMapViewerSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +107,8 @@
 				023DD4CB1EE1BA2C00619590 /* Sources */,
 				023DD4CC1EE1BA2C00619590 /* Frameworks */,
 				023DD4CD1EE1BA2C00619590 /* Resources */,
+				023DD4E71EE1BAF200619590 /* Embed Frameworks */,
+				023DD4EB1EE1BB4F00619590 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,6 +165,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		023DD4EB1EE1BB4F00619590 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh Scripts/strip-frameworks.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		023DD4CB1EE1BA2C00619590 /* Sources */ = {
@@ -260,10 +311,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = HowlNaverMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.HowlNaverMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/HowlNaverMap-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,6 +332,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = HowlNaverMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.HowlNaverMap;
